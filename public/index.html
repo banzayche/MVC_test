@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="for-filter-select"></div>
+    <div id="for-general-view"></div>    
+    <div id="nuberlist"></div>
+  </div>  
+
+  <!-- templates -->
+
+  <!-- list of tasks -->
+  <script type="text/template" id="first">
+      <div id="css1" class="addShow">
+        <input class="checkDone" type="checkbox"/>
+      </div>
+      <div id="css2" class="addShow"><%- title %></div>
+      <div id="css3" class="addShow">
+        <button id="delete">X</button>
+      </div>
+      <div id="css4" class="addHidden">
+        <input type="text" class="newName" value="<%- title %>"></input>
+      </div>
+  </script>
+
+  <!-- General view -->
+  <script type="text/template" id="second">  
+    <button id="compareTitle">Revers Compare Title</button>
+    <input type="text" id="addTodo" placeholder="Write name of task" value></input>
+    <input type="text" id="addTodoType" placeholder="Write type of task" value></input>
+    <div>
+      <button id="addTodoSend">Add TASK</button>
+    </div>
+    <label><input class="checkedAll" type="checkbox"/> Cheked All</label>
+    <span>Need to do <%- remaining %> 
+      <% if(remaining ==1) {%>
+        task
+      <%} else{%>
+        tasks
+      <%}%>
+    </span>
+    <% if(done) {%>
+      <button id="destroyDone">Clear <%- done %> completed 
+        <% if(done ==1) {%>
+          task
+        <%} else{%>
+          tasks
+        <%}%>
+      </button>
+    <% } %>
+    <button id="about">From Author</button>    
+  </script>
+
+  <!-- filter (select) template -->
+  <script type="text/template" id="filter-template">
+    <h1>My ToDo List</h1>
+    <select id="filter-types"></select>
+  </script>
+  
+  <!-- about page -->
+  <script type="text/template" id="aboutPage">
+    <h1 class="text-center">This is my first strong backbonejs work</h1>
+    <div>
+      <img src="http://a1112.phobos.apple.com/us/r1000/023/Purple4/v4/31/c5/16/31c5164e-3c43-8189-aa4c-4320a5e26dc8/mzl.xfotkbqi.350x350-75.png" class="bckbn_img"></img>
+    </div>
+    <p>This is very easy task for proffi, but for me it is start right path object-oriented programming!</p>
+    <p>Serhii Prokopchuk</p>
+    <button id="home" class="pull-right">Go Home</button>
+  </script>
+  <!-- /templates -->
+
+  <script src="/scripts/json2.js"></script>
+  <script src="/scripts/jquery.js"></script>
+  <script src="/scripts/underscore.js"></script>
+  <script src="/scripts/backbone.js"></script>
+
+  <!-- <script src="/scripts/backbone.localStorage.js"></script> -->
+  <!-- model -->
+  <script src="/scripts/models/TodoModel.js"></script>
+  <!-- collection -->
+  <script src="/scripts/collections/TodoCollection.js"></script>
+  <!-- views -->
+  <script src="/scripts/views/TodoItemView.js"></script>
+  <script src="/scripts/views/TodoListView.js"></script>
+  <script src="/scripts/views/FilterView.js"></script>
+  <script src="/scripts/views/AboutView.js"></script>
+  <script src="/scripts/app.js"></script>
+
+
+</body></html>

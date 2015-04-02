@@ -1,0 +1,143 @@
+html, body{
+	padding: 0;
+	margin: 0;
+}
+body{
+	height: 100%;
+	font-family: arial;
+	background: rgba(22, 202, 234, 0.8);
+}
+
+
+.container{
+	padding: 20px;
+	background: rgba(199, 199, 199, 0.6);
+	border-radius: 8px;
+	overflow: auto;
+	width: 30%;
+	margin: 20px auto;
+	box-shadow: 0px 0px 20px grey;
+}
+.container>div, .container>div>input{
+	width: 100%;
+}
+.container>div #destroyDone{
+	  width: 250px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  margin: 20px;
+}
+.text-center{
+	text-align: center;
+}
+.pull-right{
+	float:right;
+}
+#filter-types{
+	height: 30px;
+  margin: 0 0 10px 0;
+    width: 174px;
+}
+
+
+/*geneeral view*/
+.addHidden{
+      display: none;
+    }
+.done{
+	background-color: rgb(125, 218, 125);
+}
+.done #css2{
+	text-decoration: line-through;
+}
+#addTodoSend{
+	float:right;
+}
+#addTodo{
+	line-height: 30px;
+	  margin: 0 0 15px 0;
+	  font-size: 24px;
+	  color: rgb(168, 168, 168);
+	  border: none;
+	  padding: 0 5px;
+	  border-radius: 2px;
+	  width: 97.5%;
+}
+#addTodo+label{
+	display:block;
+	margin: 10px 0 20px 0;
+}
+#addTodoType{
+	line-height: 30px;
+	  margin: 0 0 15px 0;
+	  font-size: 24px;
+	  color: rgb(168, 168, 168);
+	  border: none;
+	  padding: 0 5px;
+	  border-radius: 2px;
+	  width: 97.5%;
+}
+#all>span{
+	  display: block;
+  color: white;
+  float: left;
+  padding: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 145, 0, 1);
+}
+#destroyDone{
+	float: right;
+}
+
+
+/*list tasks*/
+#nuberlist{
+	overflow: auto;
+}
+#nuberlist>div{
+	overflow: auto;
+	height:50px;
+	line-height: 50px;
+	padding: 0 10px;
+}
+#css1{
+	  display: block;
+  	float: left;
+  	margin-right: 20px;
+}
+#css2{
+	display: inline-block;
+  float: left;
+  font-size: 20px;
+}
+#css3{
+  float: right;
+  opacity: 0;
+}
+
+#nuberlist>div:hover #css3{
+	transition: opacity .6s ;
+	opacity: 1;
+}
+#css3>button{
+	cursor: pointer;
+}
+#css4>input{
+	width:99%;
+	line-height: 40px;
+	font-size: 20px;
+	color: grey;
+}
+
+
+/*about page*/
+.bckbn_img{
+	display: block;
+	width: 30%;
+	margin: 10px auto;
+}
+#home{
+	margin: 20px;
+}
